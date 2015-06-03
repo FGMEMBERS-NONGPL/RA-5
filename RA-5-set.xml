@@ -19,7 +19,7 @@ License:  Creative Commons, CC-BY-NC-SA
 		<aero>RA-5-jsbsim</aero>
   
 		<startup>
-			<splash-texture>Aircraft/RA-5/RA-5-splash.png</splash-texture>
+			<splash-texture>Aircraft/RA-5/RA-5-splash2.png</splash-texture>
 		</startup>
 
 		<gui>
@@ -273,6 +273,25 @@ License:  Creative Commons, CC-BY-NC-SA
 
 	<input>
 		<keyboard>
+			<key n="32">
+				<name>Spacebar</name>
+				<desc>ap off</desc>
+				<binding>
+					<command>property-assign</command>
+					<property>autopilot/locks/altitude</property>
+					<value></value>
+				</binding>
+				<binding>
+					<command>property-assign</command>
+					<property>autopilot/locks/heading</property>
+					<value></value>
+				</binding>
+				<binding>
+					<command>property-assign</command>
+					<property>autopilot/locks/speed</property>
+					<value></value>
+				</binding>
+			</key>
 
 			<key n="82">
 				<name>Shift-R</name>
@@ -281,6 +300,27 @@ License:  Creative Commons, CC-BY-NC-SA
 					<command>property-toggle</command>
 					<property>fdm/jsbsim/systems/reverser/command</property>
 				</binding>
+			</key>
+
+			<key n="127">
+				<name>del</name>
+				<desc>toggle reverser</desc>
+				<binding>
+					<command>property-toggle</command>
+					<property>controls/engines/engine[0]/reverser</property>
+				</binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>controls/engines/engine[1]/reverser</property>
+				</binding>
+				<!-- binding>
+					<command>property-toggle</command>
+					<property>controls/engines/engine[0]/throttle</property>
+				</binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>controls/engines/engine[1]/throttle</property>
+				</binding -->
 			</key>
 
 			<key n="70">
@@ -479,6 +519,9 @@ License:  Creative Commons, CC-BY-NC-SA
 	</voodoomaster>
 
 	<nasal>
+		<ra5>
+			<file>Nasal/ra5.nas</file>
+		</ra5>
 		<aar>
 			<file>Aircraft/JPack/Voodoomaster/Systems/SYS8_aar.nas</file>
 		</aar>
