@@ -342,7 +342,7 @@
  <system file="drag"/>
  <system file="beacon"/>
  <system file="canopy"/>
- <system file="reverser"/>
+ <!-- system file="reverser"/ -->
  <system file="wing-fold"/>
  <system file="cat_workaround"/>
  <system file="particles"/>
@@ -420,12 +420,12 @@
           <table>
             <independentVar lookup="row">aero/alpha-rad</independentVar>
             <tableData>
-              -0.20 -0.64
-               0.00  0.08
-               0.26  1.00
-               0.40  0.95
-               0.60  0.40
-               1.30  0.05
+              -0.20 -0.74
+               0.00  0.18
+               0.26  1.10
+               0.40  1.05
+               0.60  0.50
+               1.30  0.15
             </tableData>
           </table>
       </product>
@@ -437,7 +437,7 @@
            <property>aero/qbar-psf</property>
            <property>metrics/Sw-sqft</property>
            <property>fcs/flap-pos-norm</property>
-           <value> 0.32 </value>
+           <value> 0.36 </value>
        </product>
     </function>
 
@@ -447,7 +447,7 @@
            <property>aero/qbar-psf</property>
            <property>metrics/Sw-sqft</property>
            <property>fcs/elevator-pos-rad</property>
-           <value>0.25</value>
+           <value>0.28</value>
        </product>
     </function>
 
